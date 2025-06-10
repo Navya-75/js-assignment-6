@@ -17,9 +17,13 @@
         function save(){
             let name = document.getElementById("name").value;
             let age = document.getElementById("age").value;
+            let valid = true;
 
             localStorage.setItem("enteredName",name);
             localStorage.setItem("enteredAge",age);
+            if(valid = true){
+                alert("Data saved")
+            }
         }
 
         function load(){
@@ -28,6 +32,10 @@
 
             name.value = localStorage.getItem("enteredName");
             age.value = localStorage.getItem("enteredAge");
+
+            if(valid = true){
+                alert("Data loaded!")
+            }
         }
     </script>
 </body>
